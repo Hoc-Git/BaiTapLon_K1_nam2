@@ -1,0 +1,3 @@
+﻿  BTL.cpp
+D:\BàiTapLon\Bt\BTL\BTL\BTL.cpp(9,18): error C2374: 'window': redefinition; multiple initialization
+D:\BàiTapLon\Bt\BTL\BTL\inputext.h(12): message : see declaration of 'window'

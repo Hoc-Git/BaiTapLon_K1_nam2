@@ -1,0 +1,38 @@
+﻿  textbox_and button.cpp
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Textbox.h(52,22): warning C4018: '<': signed/unsigned mismatch
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Textbox.h(76,30): warning C4018: '<=': signed/unsigned mismatch
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Textbox.h(80,35): warning C4018: '>': signed/unsigned mismatch
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Textbox.h(103,21): warning C4018: '<': signed/unsigned mismatch
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Button.h(12,24): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Button.h(13,25): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Button.h(38,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Button.h(52,15): warning C4244: 'initializing': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Button.h(53,15): warning C4244: 'initializing': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Button.h(55,20): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Bai_tap_lon\textbox_and button\textbox_and button\Button.h(56,21): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\Bai_tap_lon\textbox_and button\textbox_and button\textbox_and button.cpp(30,10): warning C4930: 'Button btn(void)': prototyped function not called (was a variable definition intended?)
+  textbox_and button.vcxproj -> D:\Bai_tap_lon\textbox_and button\Debug\textbox_and button.exe

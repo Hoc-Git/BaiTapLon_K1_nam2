@@ -8,8 +8,8 @@
 //#include"Header.h"
 
 using namespace std;
- 
-sf::RenderWindow window(sf::VideoMode(1000, 900), "Librarian", sf::Style::Titlebar | sf::Style::Close );
+
+sf::RenderWindow window(sf::VideoMode(1000, 900), "Librarian", sf::Style::Titlebar | sf::Style::Close);
 
 struct data_sach {
     string tensach;
@@ -21,15 +21,15 @@ struct data_ {
     string name;
     string mssv;
     int soluong;
-    data_sach* datasach  ;
+    data_sach* datasach;
 
 };
 
-  
+
 int main()
 {
     data_ NgMuon[20];
-    
+
     int soluong_ngMuon = 0;
 
     bool kt_Nhap_tool = false;
@@ -37,10 +37,10 @@ int main()
     bool kt_Xoa_tool = false;
     bool kt_TimKiem_tool = false;
     bool kt_Them_tool = false;
-   
+
     //Xuat //////???
 
-    // kiem tra phan nhap
+    // kiem tra phan nhapf 
 
     bool kt_ten = false;
     bool kt_ms = false;
@@ -48,7 +48,7 @@ int main()
 
     bool kt_table[8];
 
-    for (int i = 0; i <8; i++) {
+    for (int i = 0; i < 8; i++) {
         kt_table[i] = false;
 
     }
@@ -112,18 +112,18 @@ int main()
   /*
   **********  Thong tin ca nhan *****
     *
-    
-    
+
+
     */
-  
+
     //vung nhap du lieu
     sf::RectangleShape rectangle(sf::Vector2f(120, 50));
-    rectangle.setSize(sf::Vector2f(880 , 650));
+    rectangle.setSize(sf::Vector2f(880, 650));
     rectangle.setFillColor(sf::Color(200, 200, 200, 100));
     rectangle.setPosition(60, 200);
     rectangle.setOutlineThickness(2);
     rectangle.setOutlineColor(sf::Color(100, 100, 100, 100));
-    
+
     // vung  nhap thong tin sach
 
      //bang nhap thong tin sach
@@ -153,7 +153,7 @@ int main()
         row_sach[i].setPosition(tbl_x, tbl_y);
         tbl_y += 50;
     }
-   
+
     //---- Ten cot ---
 
      //tieu de
@@ -164,7 +164,7 @@ int main()
     imp.setPosition(250.f, 200.f);
     imp.setCharacterSize(20);
 
-      // sach
+    // sach
     sf::Text name_bk;
     name_bk.setFont(font);
     name_bk.setString("Ten Sach");
@@ -188,18 +188,18 @@ int main()
     pos_sach.y = 430;
 
 
-    Textbox sach_text  [8];
+    Textbox sach_text[8];
 
     for (int i = 0; i < sach_size; i++) {
-      //  sach_text[i].setColor(sf::Color::Black);
+        //  sach_text[i].setColor(sf::Color::Black);
         sach_text[i].setTextbox(20, sf::Color::Black, true);
         sach_text[i].setFont(font);
         sach_text[i].setPosition(pos_sach);
-      
+
         pos_sach.y += 50;
 
     }
-   
+
     pos_sach.x = 100;
     pos_sach.y = 430;
 
@@ -208,7 +208,7 @@ int main()
     sach_btn1.setButton("", { 395, 30 }, 30, sf::Color::White, sf::Color::Red);
     sach_btn1.setFont(font);
     sach_btn1.setPosition(pos_sach);
-   
+
     pos_sach.y += 50;
 
     Button sach_btn2;
@@ -216,7 +216,7 @@ int main()
     sach_btn2.setButton("", { 395, 30 }, 30, sf::Color::White, sf::Color::Red);
     sach_btn2.setFont(font);
     sach_btn2.setPosition(pos_sach);
- 
+
     pos_sach.y += 50;
 
     Button sach_btn3;
@@ -224,7 +224,7 @@ int main()
     sach_btn3.setButton("", { 395, 30 }, 30, sf::Color::White, sf::Color::Red);
     sach_btn3.setFont(font);
     sach_btn3.setPosition(pos_sach);
- 
+
     pos_sach.y += 50;
 
     Button sach_btn4;
@@ -240,7 +240,7 @@ int main()
     sach_btn5.setButton("", { 395, 30 }, 30, sf::Color::White, sf::Color::Red);
     sach_btn5.setFont(font);
     sach_btn5.setPosition(pos_sach);
-   
+
     pos_sach.y += 50;
 
     Button sach_btn6;
@@ -248,7 +248,7 @@ int main()
     sach_btn6.setButton("", { 395, 30 }, 30, sf::Color::White, sf::Color::Red);
     sach_btn6.setFont(font);
     sach_btn6.setPosition(pos_sach);
-  
+
     pos_sach.y += 50;
 
     Button sach_btn7;
@@ -256,10 +256,10 @@ int main()
     sach_btn7.setButton("", { 395, 30 }, 30, sf::Color::White, sf::Color::Red);
     sach_btn7.setFont(font);
     sach_btn7.setPosition(pos_sach);
-  
+
     pos_sach.y += 50;
 
-   
+
 
     ////the loai
 
@@ -269,18 +269,18 @@ int main()
 
     int theloai_size = 7;
 
-    Textbox theloai_text [8];
+    Textbox theloai_text[8];
 
     for (int i = 0; i < theloai_size; i++) {
         theloai_text[i].setColor(sf::Color::Black);
         theloai_text[i].setTextbox(20, sf::Color::Magenta, true);
         theloai_text[i].setFont(font);
         theloai_text[i].setPosition(pos_theloai);
-      
+
         pos_theloai.y += 50;
 
     }
-   
+
     pos_theloai.x = 505;
     pos_theloai.y = 430;
 
@@ -391,9 +391,7 @@ int main()
     slbox.setFont(font);
     slbox.setPosition({ 500, 310 });
 
-
-
-    sf::Vector2f sub_ps(300 , 740);
+    sf::Vector2f sub_ps(300, 740);
     Button sub_btn("Next", { 100,80 }, 30, sf::Color::Green, sf::Color::Black);
     sub_btn.setFont(font);
     sub_btn.setPosition({ 740 , 250 });
@@ -421,7 +419,7 @@ int main()
     int row_view = 12;
 
     sf::RectangleShape row_table_view[12];
-    for (int i = 0; i <row_view ; i++) {
+    for (int i = 0; i < row_view; i++) {
         row_table_view[i].setSize(sf::Vector2f(930, 1));
         row_table_view[i].setFillColor(sf::Color::Black);
         row_table_view[i].setPosition(view_row_x, view_row_y);
@@ -429,7 +427,7 @@ int main()
     }
 
     //cot phan cach
-    
+
     //sTT
 
     sf::RectangleShape col_view_stt(sf::Vector2f(650, 1));
@@ -459,16 +457,16 @@ int main()
     float stt_pos_x = 70;
     float stt_pos_y = 270;
     int size_STT = 11;
-    
+
     int num_stt = 1;
-    for (int i = 0; i <11 ; i++) {
+    for (int i = 0; i < 11; i++) {
         stt_size[i].setFont(font);
         stt_size[i].setFillColor(sf::Color::Black);
         stt_size[i].setCharacterSize(20);
         stt_size[i].setPosition(stt_pos_x, stt_pos_y);
         stt_pos_y += 50;
 
-        
+
         string result;
         ostringstream convert;
         convert << num_stt;
@@ -499,56 +497,9 @@ int main()
     solg_text_xuat.setCharacterSize(20);
     solg_text_xuat.setPosition(850, 220);
 
-    
-    //truc giua
-    /*
-    sf::RectangleShape coltbl_view_sach(sf::Vector2f(440, 1));
-    coltbl_view_sach.setPosition(500, 380);
-    coltbl_view_sach.setFillColor(sf::Color::Black);
-    coltbl_view_sach.rotate(90);
+  
 
-    //truc ngang, dong ke
 
-    float tbl_x = 100;
-    float tbl_y = 420;
-
-    int sach_size = 7;
-
-    sf::RectangleShape row_sach[8];
-    for (int i = 0; i < sach_size; i++) {
-        row_sach[i].setSize(sf::Vector2f(800, 1));
-        row_sach[i].setFillColor(sf::Color::Black);
-        row_sach[i].setPosition(tbl_x, tbl_y);
-        tbl_y += 50;
-    }
-
-    //---- Ten cot ---
-
-     //tieu de
-    sf::Text imp;
-    imp.setFont(font);
-    imp.setString("So luong nguoi xem");
-    imp.setFillColor(sf::Color::Black);
-    imp.setPosition(250.f, 200.f);
-    imp.setCharacterSize(20);
-
-    // sach
-    sf::Text name_bk;
-    name_bk.setFont(font);
-    name_bk.setString("Ten Sach");
-    name_bk.setFillColor(sf::Color::Black);
-    name_bk.setPosition(180, 390);
-    name_bk.setCharacterSize(20);
-
-    //the loai
-    sf::Text kind_bk;
-    kind_bk.setFont(font);
-    kind_bk.setString("The Loai");
-    kind_bk.setFillColor(sf::Color::Black);
-    kind_bk.setPosition(580, 390);
-    kind_bk.setCharacterSize(20);
-    */
-    
     while (window.isOpen()) {
 
         sf::Event Event;
@@ -564,9 +515,9 @@ int main()
                 break;
                 //Kiem tra phan tu nao se duoc xac dinh de  nhap 
             case sf::Event::TextEntered:
-                
+
                 if (kt_TimKiem_tool) {
-                   tim_text.typedOn(Event);
+                    tim_text.typedOn(Event);
                 }
                 if (kt_ten) {
                     ten_textbox.typedOn(Event);
@@ -579,7 +530,7 @@ int main()
                 }
 
                 //// Xac dinh o can nhap :: ten sach
-                
+
                 if (kt_table[0]) {
                     sach_text[0].typedOn(Event);
 
@@ -612,7 +563,7 @@ int main()
                     sach_text[7].typedOn(Event);
 
                 }
-               
+
 
                 //      
 
@@ -644,15 +595,15 @@ int main()
                     theloai_text[7].typedOn(Event);
                 }
 
-               
+
                 break;
-                   
+
                 // Kiem tra vi tri cua chuot -> thay doi mau sac o chon 
             case sf::Event::MouseMoved:
 
-             /*   cout << "Mouse moved" << endl;
-                cout << "X: " << Event.mouseMove.x << ", Y: " << Event.mouseMove.y << endl;
-                */
+                  // cout << "Mouse moved" << endl;
+                //   cout << "X: " << Event.mouseMove.x << ", Y: " << Event.mouseMove.y << endl;
+                   
 
                 if (btn1.isMouseOver(window)) {
                     btn1.setBackColor(sf::Color::Magenta);
@@ -700,14 +651,14 @@ int main()
                 }
                 else
                 {
-                    sub_btn.setBackColor(sf::Color(250, 255, 150,255));
+                    sub_btn.setBackColor(sf::Color(250, 255, 150, 255));
                 }
 
                 break;
 
                 // kiem tra vi tri chuot da duoc nhan 
             case sf::Event::MouseButtonPressed:
-               
+
                 if (Nhap.isMouseOver(window)) {
                     std::cout << "Nhap\n";
                     kt_Nhap_tool = true;
@@ -717,7 +668,7 @@ int main()
                     kt_Them_tool = false;
                     kt_TimKiem_tool = false;
                 }
-               
+
 
                 if (Xuat.isMouseOver(window)) {
                     cout << "Xuat\n";
@@ -727,10 +678,10 @@ int main()
                     kt_Xoa_tool = false;
                     kt_Them_tool = false;
                     kt_TimKiem_tool = false;
-                        
+
 
                 }
-                
+
                 if (Xoa.isMouseOver(window)) {
                     cout << "Xoa\n";
                     kt_Xoa_tool = true;
@@ -741,10 +692,10 @@ int main()
                     kt_TimKiem_tool = false;
 
                 }
-                
+
                 if (Them.isMouseOver(window)) {
                     cout << "Them \n";
-                    kt_Them_tool =true;
+                    kt_Them_tool = true;
 
 
                     kt_Xuat_tool = false;
@@ -755,21 +706,21 @@ int main()
                 }
                 if (Tim.isMouseOver(window) || searchbox.isMouseOver(window)) {
                     std::cout << "Tim kiem\n";
-                    kt_TimKiem_tool= true;
+                    kt_TimKiem_tool = true;
 
 
-                    
+
                 }
 
                 if (btn1.isMouseOver(window)) {
                     std::cout << "Enter\n";
                     kt_TimKiem_tool = true;
 
-                  
+
 
                 }
-                
-                
+
+
                 //Nhap
                 if (namebox.isMouseOver(window)) {
                     kt_ten = true;
@@ -823,7 +774,7 @@ int main()
                     kt_table[1] = false;
                 }
                 //3
-    
+
                 if (sach_btn3.isMouseOver(window)) {
                     kt_table[2] = true;
 
@@ -863,9 +814,9 @@ int main()
                 else {
                     kt_table[6] = false;
                 }
-              
-             
-              
+
+
+
 
                 ////kiem tra the loai da duoc nhan hay k
 
@@ -928,29 +879,195 @@ int main()
                 break;
 
             }
-                window.clear(sf::Color::White);
-        
-                
-                Nhap.drawTo(window);
-                Xuat.drawTo(window);
-                Them.drawTo(window);
-                Xoa.drawTo(window);
-                Tim.drawTo(window);
-                btn1.drawTo(window);
-                btn1.reset();
+            window.clear(sf::Color::White);
 
-                searchbox.drawTo(window);
-                
-                tim_text.drawTo(window);
 
-                //////////////////////////////////////////////
+            Nhap.drawTo(window);
+            Xuat.drawTo(window);
+            Them.drawTo(window);
+            Xoa.drawTo(window);
+            Tim.drawTo(window);
+            btn1.drawTo(window);
+            btn1.reset();
 
-                // Nhap thong tin
-                if (kt_Nhap_tool) {
+            searchbox.drawTo(window);
+
+            tim_text.drawTo(window);
+
+            //////////////////////////////////////////////
+
+            // Nhap thong tin
+            if (kt_Nhap_tool) {
+                // Vung nhap 
+                    //ten 
+                window.draw(rectangle);
+                window.draw(imp);
+
+
+                //ho ten
+                window.draw(hoten);
+                namebox.drawTo(window);
+                ten_textbox.drawTo(window);
+
+                //msv
+                window.draw(msv);
+                msvbox.drawTo(window);
+                mssv.drawTo(window);
+
+                // so luong
+                window.draw(slg);
+                slbox.drawTo(window);
+                sl.drawTo(window);
+
+                sub_btn.drawTo(window);
+
+
+                // Xac nhap o nhap thong tin
+
+                // Nhap:: code
+
+                // Nhap thong tin sach
+
+                // Bang nhap thong tin
+                window.draw(input_bg);
+
+                window.draw(coltbl_sach);
+                for (int i = 0; i < sach_size; i++) {
+                    window.draw(row_sach[i]);
+                }
+
+                //ten cot
+                window.draw(kind_bk);//the loai
+                window.draw(name_bk);//ten sach
+
+               //bang nhap thong tin
+
+                sach_btn1.drawTo(window);
+                sach_btn2.drawTo(window);
+                sach_btn3.drawTo(window);
+                sach_btn4.drawTo(window);
+                sach_btn5.drawTo(window);
+                sach_btn6.drawTo(window);
+                sach_btn7.drawTo(window);
+
+
+                for (int i = 0; i < sach_size; i++) {
+
+                    //ten
+                    sach_text[i].drawTo(window);
+
+                }
+
+                // the loai
+                theloai_btn1.drawTo(window);
+                theloai_btn2.drawTo(window);
+                theloai_btn3.drawTo(window);
+                theloai_btn4.drawTo(window);
+                theloai_btn5.drawTo(window);
+                theloai_btn6.drawTo(window);
+                theloai_btn7.drawTo(window);
+                for (int i = 0; i < theloai_size; i++) {
+
+                    theloai_text[i].drawTo(window);
+
+                }
+
+                // xoa phan cu -> nhap phan tiep theo
+
+                /*
+                Toi da 20 ng muon sach
+                Moi ng toi da 8 quyen sach
+
+                */
+
+                if (kt_sub_btn) {
+
+
+                    cout << "Luot : " << soluong_ngMuon << endl;
+
+
+                    //ep kieu string sang int 
+
+
+                    string laysoluong = sl.getText();
+                    cout << "So luong (string): " << laysoluong << endl;
+
+                    int l1 = laysoluong.length();
+
+                    int num1 = 0;//so luong sach
+
+                    for (int i = l1 - 1; i >= 0; --i) {
+                        num1 += (int)(laysoluong[i] - '0') * pow(10, l1 - i - 1);
+                    }
+
+                    cout << "So luong (int::num1) = " << num1 << '\n';
+
+                    if (num1 <= 0 || num1 > 8) {
+                        sl.reset();
+                        kt_sub_btn = false;
+                        cout << "So luong khong hop le \n";
+                        break;
+                    }
+
+                    NgMuon[soluong_ngMuon].datasach = new data_sach[num1];
+
+
+                    for (int i = 0; i < num1; i++) {
+
+                        NgMuon[0].datasach[i].theloai = theloai_text[i].getText();
+
+                        cout << "The loai: " << NgMuon[soluong_ngMuon].datasach[i].theloai << endl;
+                    }
+
+                    for (int i = 0; i < num1; i++) {
+
+                        //ten
+
+                        NgMuon[soluong_ngMuon].datasach[i].tensach = sach_text[i].getText();
+
+                        cout << "Ten sach: " << NgMuon[soluong_ngMuon].datasach[i].tensach << endl;
+                    }
+                    for (int i = 0; i < 8; i++) {
+                        theloai_text[i].reset();
+                        sach_text[i].reset();
+                    }
+
+                    string ten = ten_textbox.getText();
+                    NgMuon[soluong_ngMuon].name = ten;
+
+                    cout << "Ten nguoi muon : " << NgMuon[soluong_ngMuon].name << endl;
+
+                    ten_textbox.reset();
+
+                    string MaSV = mssv.getText();
+
+                    NgMuon[soluong_ngMuon].mssv = MaSV;
+                    cout << "Ma Sinh Vien: " << NgMuon[soluong_ngMuon].mssv << endl;
+
+
+
+                    mssv.reset();
+                    sl.reset();
+                                        
+                    kt_sub_btn = false;
+                    soluong_ngMuon++;
+
+                }
+                ///
+            }
+            
+            if (kt_Them_tool) {
+                {
                     // Vung nhap 
                         //ten 
                     window.draw(rectangle);
-                    window.draw(imp);
+                    sf::Text them_text;
+                    them_text.setFont(font);
+                    them_text.setString("Them Thong Tin");
+                    them_text.setFillColor(sf::Color::Black);
+                    them_text.setPosition(250.f, 200.f);
+                    them_text.setCharacterSize(20);
+                    window.draw(them_text);
 
 
                     //ho ten
@@ -1024,7 +1141,7 @@ int main()
                     // xoa phan cu -> nhap phan tiep theo
 
                     /*
-                    Toi da 20 ng muon sach
+                    Toi da 100 ng muon sach
                     Moi ng toi da 8 quyen sach
 
                     */
@@ -1048,7 +1165,6 @@ int main()
                         for (int i = l1 - 1; i >= 0; --i) {
                             num1 += (int)(laysoluong[i] - '0') * pow(10, l1 - i - 1);
                         }
-
                         cout << "So luong (int::num1) = " << num1 << '\n';
 
                         if (num1 <= 0 || num1 > 8) {
@@ -1073,14 +1189,14 @@ int main()
                             //ten
 
                             NgMuon[soluong_ngMuon].datasach[i].tensach = sach_text[i].getText();
-                            
+
                             cout << "Ten sach: " << NgMuon[soluong_ngMuon].datasach[i].tensach << endl;
                         }
+
                         for (int i = 0; i < 8; i++) {
                             theloai_text[i].reset();
                             sach_text[i].reset();
                         }
-
                         string ten = ten_textbox.getText();
                         NgMuon[soluong_ngMuon].name = ten;
 
@@ -1093,285 +1209,202 @@ int main()
                         NgMuon[soluong_ngMuon].mssv = MaSV;
                         cout << "Ma Sinh Vien: " << NgMuon[soluong_ngMuon].mssv << endl;
 
-
-                        
                         mssv.reset();
                         sl.reset();
-                        slbox.reset();
-                        sl.reset();
 
-                        /*
-                        sach_btn1.reset();
-                        sach_btn2.reset();
-                        sach_btn3.reset();
-                        sach_btn4.reset();
-                        sach_btn5.reset();
-                        sach_btn6.reset();
-                        sach_btn7.reset();
-                        theloai_btn1.reset();
-                        theloai_btn2.reset();
-                        theloai_btn3.reset();
-                        theloai_btn4.reset();
-                        theloai_btn5.reset();
-                        theloai_btn6.reset();
-                        theloai_btn7.reset();
-                        sub_btn.reset();
-                        */
                         kt_sub_btn = false;
                         soluong_ngMuon++;
-                     
+
                     }
-                    ///
-                }
-                else {
-                // Xoa phan tu 
-                }
-
-
-
-                //////
-                if (kt_Them_tool) {
-                    {
-                        // Vung nhap 
-                            //ten 
-                        window.draw(rectangle);
-                        sf::Text them_text;
-                        them_text.setFont(font);
-                        them_text.setString("Them Thong Tin");
-                        them_text.setFillColor(sf::Color::Black);
-                        them_text.setPosition(250.f, 200.f);
-                        them_text.setCharacterSize(20);
-                        window.draw(them_text);
-
-
-                        //ho ten
-                        window.draw(hoten);
-                        namebox.drawTo(window);
-                        ten_textbox.drawTo(window);
-
-                        //msv
-                        window.draw(msv);
-                        msvbox.drawTo(window);
-                        mssv.drawTo(window);
-
-                        // so luong
-                        window.draw(slg);
-                        slbox.drawTo(window);
-                        sl.drawTo(window);
-
-                        sub_btn.drawTo(window);
-
-
-                        // Xac nhap o nhap thong tin
-
-                        // Nhap:: code
-
-                        // Nhap thong tin sach
-
-                        // Bang nhap thong tin
-                        window.draw(input_bg);
-
-                        window.draw(coltbl_sach);
-                        for (int i = 0; i < sach_size; i++) {
-                            window.draw(row_sach[i]);
-                        }
-
-                        //ten cot
-                        window.draw(kind_bk);//the loai
-                        window.draw(name_bk);//ten sach
-
-                       //bang nhap thong tin
-
-                        sach_btn1.drawTo(window);
-                        sach_btn2.drawTo(window);
-                        sach_btn3.drawTo(window);
-                        sach_btn4.drawTo(window);
-                        sach_btn5.drawTo(window);
-                        sach_btn6.drawTo(window);
-                        sach_btn7.drawTo(window);
-
-
-                        for (int i = 0; i < sach_size; i++) {
-
-                            //ten
-                            sach_text[i].drawTo(window);
-
-                        }
-
-                        // the loai
-                        theloai_btn1.drawTo(window);
-                        theloai_btn2.drawTo(window);
-                        theloai_btn3.drawTo(window);
-                        theloai_btn4.drawTo(window);
-                        theloai_btn5.drawTo(window);
-                        theloai_btn6.drawTo(window);
-                        theloai_btn7.drawTo(window);
-                        for (int i = 0; i < theloai_size; i++) {
-
-                            theloai_text[i].drawTo(window);
-
-                        }
-
-                        // xoa phan cu -> nhap phan tiep theo
-
-                        /*
-                        Toi da 100 ng muon sach
-                        Moi ng toi da 8 quyen sach
-
-                        */
-
-                        if (kt_sub_btn) {
-
-
-                            cout << "Luot : " << soluong_ngMuon << endl;
-
-
-                            //ep kieu string sang int 
-
-
-                            string laysoluong = sl.getText();
-                            cout << "So luong (string): " << laysoluong << endl;
-
-                            int l1 = laysoluong.length();
-
-                            int num1 = 0;//so luong sach
-
-                            for (int i = l1 - 1; i >= 0; --i) {
-                                num1 += (int)(laysoluong[i] - '0') * pow(10, l1 - i - 1);
-                            }
-                            cout << "So luong (int::num1) = " << num1 << '\n';
-
-                            if (num1 <= 0 || num1 > 8) {
-                                sl.reset();
-                                kt_sub_btn = false;
-                                cout << "So luong khong hop le \n";
-                                break;
-                            }
-                            
-                            NgMuon[soluong_ngMuon].datasach = new data_sach[num1];
-
-
-                            for (int i = 0; i < num1; i++) {
-
-                                NgMuon[0].datasach[i].theloai = theloai_text[i].getText();
-
-                                cout << "The loai: " << NgMuon[soluong_ngMuon].datasach[i].theloai << endl;
-                            }
-
-                            for (int i = 0; i < num1; i++) {
-
-                                //ten
-
-                                NgMuon[soluong_ngMuon].datasach[i].tensach = sach_text[i].getText();
-
-                                cout << "Ten sach: " << NgMuon[soluong_ngMuon].datasach[i].tensach << endl;
-                            }
-
-                            for (int i = 0; i < 8; i++) {
-                                theloai_text[i].reset();
-                                sach_text[i].reset();
-                            }
-
-
-                            string ten = ten_textbox.getText();
-                            NgMuon[soluong_ngMuon].name = ten;
-
-                            cout << "Ten nguoi muon : " << NgMuon[soluong_ngMuon].name << endl;
-
-                            ten_textbox.reset();
-
-                            string MaSV = mssv.getText();
-
-                            NgMuon[soluong_ngMuon].mssv = MaSV;
-                            cout << "Ma Sinh Vien: " << NgMuon[soluong_ngMuon].mssv << endl;
-
-                            mssv.reset();
-                            sl.reset();
-
-                            kt_sub_btn = false;
-                            soluong_ngMuon++;
-                        }
-                        ///
-                    }
-                }
-                     
-                if (kt_Xuat_tool) {
-
-                    /*
-                    lay gia tri gan vao sf::Text -> draw;
-                    cap phat bo nho cho text 
                     
-                    */
-
-                    window.draw(Xuat_bgr);
-                    // Bang xem thong tin
-                  
-                    window.draw(col_view_stt);
-                    window.draw(stt_text_xuat);  
-                    window.draw(ten_text_xuat);
-                    window.draw(mssv_text_xuat);
-                    window.draw(solg_text_xuat);
-                    
-                    window.draw(col_view_mssv);
-                    window.draw(col_view_solg);
-                    
-                    for (int i = 0; i < row_view; i++) {
-                        window.draw(row_table_view[i]);
-                    }
-                    for (int i = 0; i < 11; i++) {
-                        window.draw(stt_size[i]);
-                    }
                 }
-
-                if (kt_Xoa_tool) {
-
-                    sf::RectangleShape input_bg;
-                    input_bg.setSize(sf::Vector2f(500, 60));
-                    input_bg.setFillColor(sf::Color(255, 128, 128, 120));
-                    input_bg.setPosition(250, 115);
-
-                    window.draw(input_bg);
-                    sf::Text xoa_title;
-
-                    xoa_title.setFont(font);
-                    xoa_title.setString("XOA");
-                    xoa_title.setFillColor(sf::Color::Black);
-                    xoa_title.setPosition(450, 110);
-                    xoa_title.setCharacterSize(50);
-
-                    
-
-                    window.draw(Xuat_bgr);
-                    // Bang xem thong tin
-
-                    window.draw(col_view_stt);
-                    window.draw(stt_text_xuat);
-                    window.draw(ten_text_xuat);
-                    window.draw(mssv_text_xuat);
-                    window.draw(solg_text_xuat);
-
-                    window.draw(col_view_mssv);
-                    window.draw(col_view_solg);
-
-                    for (int i = 0; i < row_view; i++) {
-                        window.draw(row_table_view[i]);
-                    }
-                    for (int i = 0; i < 11; i++) {
-                        window.draw(stt_size[i]);
-                    }
-                    window.draw(xoa_title);
-
-                }
-
-                if (kt_TimKiem_tool) {
-                    // Goi lai  phan Xuat
-                    // truyen vao gia tri can tim 
-                }
-                window.display();
             }
+
+            if (kt_Xuat_tool) {
+
+                /*
+                lay gia tri gan vao sf::Text -> draw;
+                cap phat bo nho cho text
+
+                */
+
+                window.draw(Xuat_bgr);
+                // Bang xem thong tin
+
+                window.draw(col_view_stt);
+                window.draw(stt_text_xuat);
+                window.draw(ten_text_xuat);
+                window.draw(mssv_text_xuat);
+                window.draw(solg_text_xuat);
+
+                window.draw(col_view_mssv);
+                window.draw(col_view_solg);
+
+                for (int i = 0; i < row_view; i++) {
+                    window.draw(row_table_view[i]);
+                }
+                for (int i = 0; i < 11; i++) {
+                    window.draw(stt_size[i]);
+                }
+
+                // Xuat 
+
+                float ten_xuat_pos_x = 110;
+                float ten_xuat_pos_y = 270;
+
+                sf::Text Ten_xuat[11];
+                for (int i = 0; i < soluong_ngMuon; i++) {
+                    Ten_xuat[i].setFont(font);
+                    Ten_xuat[i].setCharacterSize(20);
+                    Ten_xuat[i].setFillColor(sf::Color::Black);
+                    Ten_xuat[i].setPosition(ten_xuat_pos_x, ten_xuat_pos_y);
+                   // Ten_xuat[i].setString("Ten");
+                    Ten_xuat[i].setString(NgMuon[i].name);
+                    ten_xuat_pos_y += 50;
+                    window.draw(Ten_xuat[i]);
+                }
+
+                float msv_xuat_pos_x = 510;
+                float msv_xuat_pos_y = 270;
+
+                sf::Text msv_xuat[11];
+                for (int i = 0; i < soluong_ngMuon; i++) {
+                    msv_xuat[i].setFont(font);
+                    msv_xuat[i].setCharacterSize(20);
+                    msv_xuat[i].setFillColor(sf::Color::Black);
+                    msv_xuat[i].setPosition(msv_xuat_pos_x, msv_xuat_pos_y);
+                    msv_xuat[i].setString(NgMuon[i].mssv);
+                    msv_xuat_pos_y += 50;
+                    window.draw(msv_xuat[i]);
+
+                }
+
+                float solg_xuat_pos_x = 810;
+                float solg_xuat_pos_y = 270;
+
+                sf::Text solg_xuat[11];
+                for (int i = 0; i < soluong_ngMuon; i++) {
+                    solg_xuat[i].setFont(font);
+                    solg_xuat[i].setCharacterSize(20);
+                    solg_xuat[i].setFillColor(sf::Color::Black);
+                    solg_xuat[i].setPosition(solg_xuat_pos_x, solg_xuat_pos_y);
+
+                    cout <<"So luong sach" <<NgMuon[i].soluong<<endl;
+                    string result;
+                    ostringstream convert;
+                    convert << NgMuon[i].soluong;
+                    result = convert.str();
+                    solg_xuat[i].setString(result);
+
+                    solg_xuat_pos_y += 50;
+
+                    window.draw(solg_xuat[i]);
+                }
+
+                
+            }
+
+            if (kt_Xoa_tool) {
+
+                sf::RectangleShape input_bg;
+                input_bg.setSize(sf::Vector2f(500, 60));
+                input_bg.setFillColor(sf::Color(255, 128, 128, 120));
+                input_bg.setPosition(250, 115);
+
+                window.draw(input_bg);
+                sf::Text xoa_title;
+
+                xoa_title.setFont(font);
+                xoa_title.setString("XOA");
+                xoa_title.setFillColor(sf::Color::Black);
+                xoa_title.setPosition(450, 110);
+                xoa_title.setCharacterSize(50);
+
+
+
+                window.draw(Xuat_bgr);
+                // Bang xem thong tin
+
+                window.draw(col_view_stt);
+                window.draw(stt_text_xuat);
+                window.draw(ten_text_xuat);
+                window.draw(mssv_text_xuat);
+                window.draw(solg_text_xuat);
+
+                window.draw(col_view_mssv);
+                window.draw(col_view_solg);
+
+                for (int i = 0; i < row_view; i++) {
+                    window.draw(row_table_view[i]);
+                }
+                for (int i = 0; i < 11; i++) {
+                    window.draw(stt_size[i]);
+                }
+                window.draw(xoa_title);
+
+                // Xuat 
+
+                float ten_xuat_pos_x = 100;
+                float ten_xuat_pos_y = 270;
+
+                sf::Text Ten_xuat[11];
+                for (int i = 0; i < soluong_ngMuon; i++) {
+                    Ten_xuat[i].setFont(font);
+                    Ten_xuat[i].setCharacterSize(20);
+                    Ten_xuat[i].setFillColor(sf::Color::Black);
+                    Ten_xuat[i].setPosition(ten_xuat_pos_x, ten_xuat_pos_y);
+                    Ten_xuat[i].setString(NgMuon[i].name);
+                    ten_xuat_pos_y += 50;
+                }
+
+                float msv_xuat_pos_x = 510;
+                float msv_xuat_pos_y = 270;
+
+                sf::Text msv_xuat[11];
+                for (int i = 0; i < soluong_ngMuon; i++) {
+                    msv_xuat[i].setFont(font);
+                    msv_xuat[i].setCharacterSize(20);
+                    msv_xuat[i].setFillColor(sf::Color::Black);
+                    msv_xuat[i].setPosition(msv_xuat_pos_x, msv_xuat_pos_y);
+                    msv_xuat[i].setString(NgMuon[i].mssv);
+                    msv_xuat_pos_y += 50;
+                }
+
+                float solg_xuat_pos_x = 810;
+                float solg_xuat_pos_y = 270;
+
+                sf::Text solg_xuat[11];
+                for (int i = 0; i < soluong_ngMuon; i++) {
+                    solg_xuat[i].setFont(font);
+                    solg_xuat[i].setCharacterSize(20);
+                    solg_xuat[i].setFillColor(sf::Color::Black);
+                    solg_xuat[i].setPosition(solg_xuat_pos_x, solg_xuat_pos_y);
+
+                    string result;
+                    ostringstream convert;
+                    convert << NgMuon[i].soluong;
+                    result = convert.str();
+                    solg_xuat[i].setString(result);
+
+                    solg_xuat_pos_y += 50;
+                }
+                kt_Xoa_tool = false;
+
+            }
+
+            if (kt_TimKiem_tool) {
+                
+            }
+            window.display();
         }
+    }
+    
+/*
+    for (int i = 0; i < 20; i++) {
         delete NgMuon->datasach;
-        return 0;
+    }
+    */
+    return 0;
 
 }
 
